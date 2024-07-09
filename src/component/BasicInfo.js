@@ -1,10 +1,12 @@
 import React from 'react'
 
 export default function BasicInfo(props) {
-    console.log(props)
+    console.log(props.contacts)
     return (
     <div>
-        Hello, my name is {props.person.name}. My phone number is {props.person.number}. I was born {props.person.dateOfBirth}.
+        {props.contacts.map((contact) => (
+        <p>Hello, my name is {contact.name}. My phone number is {contact.number}. I was born {contact.dateOfBirth}. </p>
+        ))}
     </div>
   )
 }
