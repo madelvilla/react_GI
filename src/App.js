@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
+import BasicInfo from './component/BasicInfo';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {person: {}};
+    this.state = {
+      person: {
+        name: "Lourdes Villa",
+        number: "123-123-5678",
+        dateOfBirth: "05-04-1998"
+      }
+    };
   }
   render() {
     return (
-      <div>
-        Hello, my name is Lourdes Villa. My phone number is 123-123-5678. I was born May 4, 1998. 
-      </div>
+      <BasicInfo person={this.state.person}/>
     )
   }
 }
